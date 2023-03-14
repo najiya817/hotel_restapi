@@ -20,5 +20,5 @@ from api.views import DishList,SpecificDish
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dish/',DishList.as_view()),
-    path('dishes/',SpecificDish.as_view()),
+    path('dishes/<int:did>',SpecificDish.as_view()),
 ]
